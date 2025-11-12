@@ -1,0 +1,84 @@
+
+faire le plan d'adressage et le schema. 
+
+1B / 2A / 3B
+
+MISSION 1
+
+---> NGFW/VPN & gestion des vlans/segmentation
+
+a) 
+utiliser GNS3 
+trouver et mettre en place deux par-feu NGFW different : 
+utiliser un VPN site-to-site ( cloud service ? https://nordlayer.com/blog/what-is-site-to-site-vpn/ ) 
+il faut créer un tunnel VPN ( https://nordlayer.com/blog/what-is-site-to-site-vpn/ )
+
+
+b) utiliser VLSM pour segmenter et diviser un réseau IP en sous-réseaux de tailles différentes ( https://doknet.fr/tssr/exploiter-les-elements-de-linfrastructure-et-assurer-le-support-aux-utilisateurs/exploiter-un-reseau-ip/utiliser-la-methode-vlsm-pour-optimiser-le-decoupage-dun-reseau-en-sous-reseaux-avec-exemples/ )
+- Le plan doit détailler les plages IP, les masques et les ID de VLAN pour chaque segment (ex: Management, Serveurs, Données, Voix).
+
+
+MISSION 2
+
+---> Plan de Reprise d'Activité & Cluster 
+
+a) proposer un RTO / RPO (documentation claire) ( https://www.hycu.com/fr/blog/rpo-vs-rto-what-you-need-know-about-these-essential-recovery-metrics )
+b) (en lien avec le point 2.A) proposer un schema infra pour monter la redondance et la haute dispo --> le RAID 5 mis en place ( https://www.ionos.fr/digitalguide/serveur/securite/raid-5/ )
+   utiliser Proxmox ? ( https://overcomputing.net/index.php/2025/01/28/simple-installation/ )
+   faire un cluster avec Proxmox : ( https://overcomputing.net/index.php/2025/01/28/creation-dun-cluster-proxmox/ )
+c) Azure Landing Zone et description du role du cloud azure dans la stratégie de PRA (sauvegarde & controleur de domaine) ( https://learn.microsoft.com/fr-fr/azure/cloud-adoption-framework/ready/landing-zone/ )
+d) proposer une architecture pour établir une connexion VPN sécurisé et résiliente entre le datacenter et le VNet Hub Azure ( lier le vpn avec azure (dedicated ip) ) 
+
+MISSION 3
+
+---> supervision et redaction des supports 
+
+a) refonte de la stratégie de supervision : Il faut utiliser Zabbix ou un autre qu'il faudra justifier (Prometheus & Grafana / Last9 / Nagios / Grafana Cloud ... ) 
+b) faire un guide N1/N2 : il faut expliquer comment dépanner un problème de mauvaise qualité de la VoIP (latence/gigue) sur un site distant (franchise). par exemple un probleme de connexion qui empeche les telephone et bien fonctionner --> relancer le wifi, verifier la connexion etc...
+
+VoIP --> ( https://www.gigaset.com/fr_fr/cms/voip.html )
+Les avantages de la VoIP incluent une réduction significative des coûts, notamment pour les appels internationaux, une meilleure qualité d'appel grâce à des codecs avancés comme Opus, AAC-LD ou G.729, une flexibilité accrue avec l'accès depuis divers appareils (ordinateurs, smartphones, téléphones IP, lignes fixes via adaptateurs).
+Elle permet également une intégration avec d'autres services de communication, comme la messagerie instantanée, le transfert de fichiers, et la visioconférence, favorisant ainsi la communication unifiée.
+Les entreprises peuvent adopter des solutions VoIP via des IPBX (autocommutateurs téléphoniques IP), des passerelles pour conserver leur infrastructure existante, ou des services hébergés en mode cloud (Centrex IP).
+
+
+####################################
+
+
+LIVRABLE : archive .zip.
+
+Un seul dossier technique, structuré en trois parties, doit être livré en amont de la soutenance auprès du client.
+Format : PDF, structuré et numéroté.
+
+Schema infra reseau
+Documentation FR/EN
+
+1)Dossier de Conception
+
+- Objectifs de Résilience : Objectifs RTO et RPO retenus pour le service critique.
+- Design de Virtualisation : Schéma du cluster de virtualisation proposé (Hyperviseur + Stockage HA).
+- Justification du choix pour éliminer le SPOF de l'ESXi 6.5.
+- Design Cloud Hybride : Schéma détaillé de l'Azure Landing Zone et de la connexion Site-to-Cloud.
+
+2)Documentation Opérationnelle et MCO
+
+- Plan de Numérotation/VLANs : Tableau de synthèse du nouveau plan d'adressage IP et de la segmentation
+- VLAN pour les sites distants et le siège (incluant le VLAN Voix et les règles de QoS).
+- Stratégie de Supervision : Description de la nouvelle chaîne de supervision (choix d'outils, éléments surveillés, seuils d'alerte sur les nouveaux équipements).
+
+3)Guide de Dépannage N1/N2
+
+- Procédure de Diagnostic ToIP : Guide détaillé pour un technicien support (N1/N2) pour identifier la cause d'une dégradation de la qualité de la VoIP (latence/gigue) sur un site distant (franchise) en utilisant les outils de diagnostic de la nouvelle infrastructure.
+
+4)PRA
+
+- PRA : Description du PRA pour le service critique choisi.
+
+
+
+
+
+
+
+
+
