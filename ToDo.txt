@@ -10,8 +10,12 @@ MISSION 1
 a) 
 utiliser GNS3 
 trouver et mettre en place deux par-feu NGFW different : 
-utiliser un VPN site-to-site ( cloud service ? https://nordlayer.com/blog/what-is-site-to-site-vpn/ ) 
-il faut créer un tunnel VPN ( https://nordlayer.com/blog/what-is-site-to-site-vpn/ )
+utiliser un VPN site-to-site (cloud service ?) 
+il faut créer un tunnel VPN
+
+Lien utile :
+ https://community.fortinet.com/t5/FortiGate/Technical-Tip-How-to-add-a-FortiGate-VM-into-the-GNS3/ta-p/242132
+ https://nordlayer.com/blog/what-is-site-to-site-vpn/
 
 
 b) utiliser VLSM pour segmenter et diviser un réseau IP en sous-réseaux de tailles différentes ( https://doknet.fr/tssr/exploiter-les-elements-de-linfrastructure-et-assurer-le-support-aux-utilisateurs/exploiter-un-reseau-ip/utiliser-la-methode-vlsm-pour-optimiser-le-decoupage-dun-reseau-en-sous-reseaux-avec-exemples/ )
@@ -73,6 +77,25 @@ Documentation FR/EN
 4)PRA
 
 - PRA : Description du PRA pour le service critique choisi.
+
+
+
+
+
+
+
+
+
+cluster proxmox :
+
+avoir de pref deux a 3 carte reseaux ( 1 vm dedié / 1 autre pour cluster le dalogue entre hyprviseur et vm )
+
+
+
+
+
+
+
 
 
 
