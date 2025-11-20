@@ -16,6 +16,7 @@ il faut créer un tunnel VPN
 Lien utile :
  https://community.fortinet.com/t5/FortiGate/Technical-Tip-How-to-add-a-FortiGate-VM-into-the-GNS3/ta-p/242132
  https://nordlayer.com/blog/what-is-site-to-site-vpn/
+ https://www.aukfood.fr/proxmox-systeme-de-stockage-ceph/
 
 
 b) utiliser VLSM pour segmenter et diviser un réseau IP en sous-réseaux de tailles différentes ( https://doknet.fr/tssr/exploiter-les-elements-de-linfrastructure-et-assurer-le-support-aux-utilisateurs/exploiter-un-reseau-ip/utiliser-la-methode-vlsm-pour-optimiser-le-decoupage-dun-reseau-en-sous-reseaux-avec-exemples/ )
