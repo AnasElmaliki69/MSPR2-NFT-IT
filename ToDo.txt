@@ -1,4 +1,10 @@
 
+voir les masques de la segmentation
+
+latence / debit (telephone IP) / on-off / utilisateurs / verifier carte reseaux cluster / charge CPU ou charge memoire etc... 
+
+
+
 faire le plan d'adressage et le schema. 
 
 1B / 2A / 3B
